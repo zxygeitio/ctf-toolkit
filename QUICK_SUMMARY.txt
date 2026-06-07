@@ -1,0 +1,266 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    CTF离线版工具包 - 能力快速摘要                          ║
+║                              v6.1 (2026-06-07)                           ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📊 总览
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• 文件数: 48个脚本/模块
+• 命令数: 42个快捷命令
+• 漏洞类型: 24+种
+• 语言: Python + Bash
+• GUI: tkinter图形界面 (8标签页)
+
+🎯 一、攻击模块 (Web) - 10个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Web快速侦察 (10项检测)
+✓ SQL注入 (4种+sqlmap+Coraza WAF绕过) ← NEW
+✓ 文件上传绕过 (6种技术)
+✓ SSTI模板注入 (5引擎+RCE)
+✓ 文件包含 (LFI/RFI/伪协议)
+✓ XSS检测 (反射/存储/DOM)
+✓ JWT攻击 (alg=none/密钥爆破)
+✓ 命令注入 (管道符/反引号/$())
+✓ Webshell生成 (PHP/JSP/ASP/Python/反弹Shell)
+✓ 自动化漏洞利用
+
+🔐 二、密码学模块 - 4个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 自动解密 (Base64/32/16, URL, Unicode, Hex)
+✓ 古典密码 (Caesar/Vigenère/Rail Fence/Bacon/Morse)
+✓ 现代密码 (RSA/AES/DES/ChaCha20/XOR)
+✓ RSA攻击 (小e/共模/分解/Wiener/Hastad)
+✓ 哈希破解 (MD5/SHA/NTLM/MySQL)
+
+💥 三、PWN模块 - 4个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 保护检查 (NX/ASLR/PIE/Canary/RELRO)
+✓ Exploit模板自动生成
+✓ 模式字符串生成+偏移计算
+✓ ROP gadget搜索
+
+🔄 四、逆向模块 - 3个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 静态分析 (strings/objdump/r2/Ghidra)
+✓ 动态分析 (ltrace/strace/gdb+pwndbg)
+✓ Python字节码反编译 (.pyc)
+
+📁 五、Misc模块 - 5个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 隐写分析 (PNG/JPEG/GIF/音频, 10项检测)
+✓ 文件取证 (元数据/嵌入文件/损坏修复)
+✓ 流量分析 (HTTP/DNS/FTP, Flag自动搜索)
+✓ 文件类型深度分析
+✓ 压缩包破解 (伪加密/CRC/密码爆破)
+
+🔍 六、侦察模块 - 4个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 端口扫描 (TCP/UDP, 服务版本识别)
+✓ 服务枚举 (SMB/SNMP/LDAP/NFS/SMTP)
+✓ 暴力破解 (SSH/FTP/MySQL/HTTP)
+✓ 目录FUZZ (gobuster/ffuf/dirsearch)
+
+🛡️ 七、防御模块 (AWD) - 5个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 流量监控 (实时告警)
+✓ 漏洞修补 (SSH/MySQL/Redis/Apache/Nginx)
+✓ Flag保护 (权限600/inotify监控)
+✓ 攻击检测 (Webshell/后门/异常进程)
+✓ AWD自动化 (自动攻击+防御+提交)
+
+🚀 八、自动化模块 - 3个脚本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 全自动攻击链 (侦察→扫描→利用→Flag→报告)
+✓ Flag搜索 (文件/DB/内存/环境变量)
+✓ 批量利用 (多目标并行)
+
+🎮 九、新增模块 (SAS CTF 2026) - 2个脚本 + 3个插件
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ WAF绕过模块 (waf_bypass.py)
+  - Coraza WAF检测与绕过
+  - UNION VALUES完全绕过 @detectSQLi ← 核心发现
+  - left/right替代substring绕过
+  - WAF函数矩阵 (14允许/13拦截)
+  - PL/pgSQL EXECUTE注入检测
+  - 游戏API端点发现
+  - PDF泄露Flag检测
+
+✓ 游戏题自动化 (game_auto.py)
+  - 游戏API端点自动发现
+  - BFS自动寻路算法
+  - 自动收集星星
+  - Kernel代码生成器
+  - Sandbox限制检测
+
+✓ 主引擎新增插件 (engine.py)
+  - Coraza WAF绕过插件 (coraza_bypass)
+  - 游戏API插件 (game_api)
+  - PDF泄露插件 (pdf_leak)
+
+📊 十、自动化引擎 - 21个漏洞插件
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL: sqli, cmdi, ssti, deserialization, framework_exploit
+HIGH:     lfi, idor, ssrf, jwt, upload, sensitive_file, nosqli, 
+          coraza_bypass ← NEW, pdf_leak ← NEW
+MEDIUM:   xss, cors, info_leak, game_api ← NEW, host_header, csrf
+LOW:      open_redirect
+
+🖥️ 十一、图形界面 - 8个标签页
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Web (SQL注入/XSS/SSTI/LFI/上传)
+2. Crypto (编码/哈希/RSA/AES)
+3. PWN (保护检查/exploit模板)
+4. Reverse (静态/动态分析)
+5. Misc (隐写/取证/流量)
+6. Recon (端口扫描/枚举)
+7. Defense (监控/修补/检测)
+8. Tools (一键攻击/Flag搜索)
+
+📦 十二、Payload库
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Webshell (PHP/JSP/ASP/Python/内存马)
+• SQL注入 (MySQL/PostgreSQL/SQLite/MSSQL + WAF绕过)
+• XSS (反射/存储/DOM + CSP绕过)
+• SSTI (Jinja2/Twig/Smarty + RCE)
+• LFI (目录穿越 + PHP伪协议)
+• 反弹Shell (bash/python/perl/ruby/php)
+
+📚 十三、字典库
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• 用户名字典
+• 密码字典
+• 常见目录字典
+• 子域名字典
+• 参数字典
+
+🎯 十四、快速命令速查
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【攻击】
+ctf web-recon <URL>        # Web侦察(10项)
+ctf sqli <URL> [param]     # SQL注入(4种+sqlmap)
+ctf upload <URL> [path]    # 上传绕过(6种技术)
+ctf ssti <URL> [param]     # SSTI(5引擎+RCE)
+ctf lfi <URL> <param>      # 文件包含(LFI/RFI/伪协议)
+ctf shell all              # 生成全类型Webshell/反弹Shell
+ctf exploit <URL>          # 自动化漏洞利用
+
+【密码学】
+ctf crypto auto <input>    # 自动检测+3层递归解码
+ctf rsa small_e 3 <c>      # RSA小指数攻击
+ctf hash <HASH>            # 哈希识别+破解
+ctf encode <TEXT>          # 多重编码检测
+
+【PWN】
+ctf pwn-check <BINARY>     # 保护检查+利用建议
+ctf pwn-exploit <BINARY>   # 自动生成exploit模板
+ctf pwn-pattern <LEN>      # 生成模式字符串
+ctf pwn-rop <BINARY>       # ROP gadget搜索
+
+【逆向】
+ctf rev <BINARY>           # 静态分析(strings/objdump/r2)
+ctf rev-dynamic <BINARY>   # 动态分析(ltrace/strace/gdb)
+ctf rev-pyc <FILE>         # Python字节码反编译
+
+【Misc】
+ctf stego <FILE>           # 隐写分析(10项)
+ctf pcap <FILE>            # 流量分析(HTTP/DNS/FTP/Flag搜索)
+ctf zip <FILE>             # 压缩包(伪加密/CRC/john)
+ctf file <FILE>            # 文件类型深度分析
+ctf forensics <FILE>       # 文件取证分析
+
+【侦察】
+ctf scan <TARGET>          # 端口扫描+服务识别
+ctf enum <TARGET>          # 服务枚举
+ctf brute <TARGET> <SVC>   # 暴力破解(ssh/ftp/mysql)
+ctf fuzz <URL>             # 目录/参数FUZZ
+
+【防御 (AWD)】
+ctf monitor [IFACE]        # 流量监控
+ctf patch <SERVICE>        # 漏洞修补
+ctf flag-protect           # Flag文件保护
+ctf detect [IFACE]         # 攻击检测
+
+【自动化】
+ctf auto <TARGET>          # 全自动攻击链
+ctf flag-hunt [PATH]       # Flag搜索
+ctf batch <TARGETS_FILE>   # 批量利用
+ctf loot                   # 查看战利品
+ctf gui                    # 启动图形界面
+
+【新增 (SAS CTF 2026)】
+python3 waf_bypass.py waf_detect <URL>      # WAF检测
+python3 waf_bypass.py union_values <URL> <param>  # UNION VALUES绕过
+python3 game_auto.py auto <URL>             # 游戏题自动化
+python3 game_auto.py kernel <direction>     # 生成kernel
+
+🎓 十五、使用场景
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【场景1: CTF比赛 (Jeopardy)】
+ctf web-recon http://target.com
+ctf auto http://target.com
+ctf flag-hunt /tmp
+
+【场景2: AWD攻防赛】
+ctf flag-protect
+ctf patch all
+ctf scan 192.168.1.0/24
+ctf auto 192.168.1.100
+ctf monitor
+
+【场景3: 隔离网络比赛】
+bash ctf.sh web-recon http://target
+bash ctf.sh sqli http://target?id=1
+bash ctf.sh crypto base64 SGVsbG8=
+
+【场景4: 游戏题 (Kolobok)】
+python3 game_auto.py auto https://game.ctf.com
+python3 game_auto.py kernel 左
+
+【场景5: WAF绕过 (Coraza)】
+python3 waf_bypass.py waf_detect https://target.com/api
+python3 waf_bypass.py union_values https://target.com/api id current_database()
+
+📊 十六、能力统计
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┌─────────┬──────────┬──────────┬──────────────────────────────┐
+│ 模块    │ 脚本数   │ 命令数   │ 漏洞类型                     │
+├─────────┼──────────┼──────────┼──────────────────────────────┤
+│ Web     │ 10       │ 11       │ SQLi/XSS/SSTI/LFI/CMDi/上传  │
+│ Crypto  │ 4        │ 4        │ RSA/AES/DES/哈希/编码        │
+│ PWN     │ 4        │ 4        │ 栈溢出/堆利用/格式化字符串   │
+│ Reverse │ 3        │ 3        │ 静态/动态/字节码             │
+│ Misc    │ 5        │ 5        │ 隐写/取证/流量/压缩包        │
+│ Recon   │ 4        │ 4        │ 端口/服务/暴力/FUZZ          │
+│ Defense │ 5        │ 4        │ 监控/修补/保护/检测          │
+│ Auto    │ 3        │ 3        │ 攻击链/Flag搜索/批量         │
+│ New     │ 2        │ 4        │ WAF绕过/游戏题/PDF泄露       │
+├─────────┼──────────┼──────────┼──────────────────────────────┤
+│ 总计    │ 48       │ 42       │ 24+漏洞类型                  │
+└─────────┴──────────┴──────────┴──────────────────────────────┘
+
+🏆 十七、核心优势
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 全覆盖: Web/Crypto/PWN/Reverse/Misc全题型
+✓ 自动化: 21个漏洞插件 + 智能爬虫 + 自动利用
+✓ 离线可用: 不依赖网络，适合隔离环境
+✓ 模块化: 独立脚本，易于扩展
+✓ GUI支持: 图形界面一键操作
+✓ AWD支持: 攻防赛专用模块
+✓ 实战验证: SAS CTF 2026经验优化
+
+📚 十八、版本历史
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+v1.0: 基础脚本集合
+v2.0: 模块化架构
+v3.0: GUI图形界面
+v4.0: 自动化引擎
+v5.0: AWD防御模块
+v6.0: 插件化架构 (21个插件)
+v6.1: SAS CTF 2026优化 (WAF绕过/游戏题/PDF泄露) ← 当前版本
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+最后更新: 2026-06-07
+文档: /root/ctf-toolkit/CAPABILITIES.md (完整版)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
