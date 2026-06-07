@@ -1,0 +1,46 @@
+CTF离线版工具包
+版本: v7.0
+更新日期: 2026-06-07
+
+主要更新:
+1. 智能自动化引擎 (auto_ctf.py)
+   - 自动识别目标类型
+   - 自动选择工具链
+   - 自动执行测试
+   - 自动提取Flag
+   - 提供优化建议
+
+2. 新增命令集成
+   - auto-solve: 一键自动化解题
+   - batch-solve: 批量自动化解题
+   - coraza-bypass: Coraza WAF绕过
+   - game-auto: 游戏题自动化
+   - game-kernel: 生成游戏kernel
+   - pdf-leak: PDF泄露检测
+
+3. 测试验证
+   - 所有新命令测试通过
+   - 自动化流程验证完成
+   - 离线环境测试通过
+
+文件结构:
+- auto_ctf.py: 智能自动化引擎
+- ctf.sh: 主入口 (新增6个命令)
+- waf_bypass.py: WAF绕过模块
+- game_auto.py: 游戏题自动化
+- AUTOMATION_GUIDE.md: 自动化工作流指南
+- COMPLETE_SUMMARY.md: 完整总结
+
+核心优势:
+- 一键自动化
+- 智能决策
+- 离线可用
+- 批量处理
+- 结果保存
+- 建议提供
+
+适用场景:
+- CTF比赛
+- 隔离网络竞赛
+- 安全培训
+- 渗透测试
